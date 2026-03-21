@@ -5,7 +5,8 @@
 	"name": "Hydrophobic Elytra",
 	"description": "With this mod players will not be able to fly with the Elytra under the fluids",
 	"authors": [
-		"Paravel"
+		"Paravel",
+		"VeritasShield"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -13,26 +14,15 @@
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/hydrophobic-elytra/icon.png",
-	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"me.paravel.hydrophobicelytra.HydrophobicElytra"
-		],
-		"client": [
-			"me.paravel.hydrophobicelytra.HydrophobicElytraClient"
 		]
 	},
-	"mixins": [
-		"hydrophobic-elytra.mixins.json",
-		{
-			"config": "hydrophobic-elytra.client.mixins.json",
-			"environment": "client"
-		}
-	],
 	"depends": {
-		"fabricloader": ">=0.14.23",
-		"minecraft": "~1.20.2",
-		"java": ">=17",
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
 		"fabric-api": "*"
 	},
 	"suggests": {
