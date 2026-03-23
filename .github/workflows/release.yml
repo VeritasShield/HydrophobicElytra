@@ -1,0 +1,32 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*' # Se activará cuando subas un tag que empiece por 'v' (ej. v1.1.6)
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Permiso necesario para crear la Release
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Build Mod with Gradle
+        run: chmod +x ./gradlew && ./gradlew build -Prelease
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          draft: true # Crea la release como borrador para que la edites antes de publicarla
+          generate_release_notes: true # Genera un changelog automático basado en los commits
+          files: build/libs/*.jar
