@@ -3,16 +3,20 @@
 ![Minecraft Version](https://img.shields.io/badge/Minecraft-1.21.11-success)
 ![Mod Loader](https://img.shields.io/badge/Modloader-Fabric-orange)
 ![License](https://img.shields.io/badge/License-CC0_1.0-blue)
+![Client Side](https://img.shields.io/badge/✅_100%25_Client--Side-Required-brightgreen)
+![Vanilla Servers](https://img.shields.io/badge/✅_Works_on_Vanilla_Servers-Yes-brightgreen)
 
 **Hydrophobic Elytra** is a simple mod for Minecraft (Fabric) that adds a touch of realism and difficulty to the game: **it prevents players from flying or propelling themselves with Elytras while submerged in fluids** (such as water or lava).
+
+<!-- ✨ SUSTITUYE ESTA LÍNEA POR LA URL DE TU GIF (EJ. ![Demostración de Elytras fallando en el agua](https://url-del-gif-aqui.gif) ) ✨ -->
 
 ## ✨ Features
 
 * **Restricted flight in fluids:** If you try to open your Elytras underwater, lava, or any other fluid, the mod will cancel the action.
-* **In-game Feedback:** Displays a non-intrusive warning message directly on your action bar if you try to fly while wet.
+* **In-game Feedback:** Displays a non-intrusive warning message directly on your action bar if you try to fly while wet. Now includes bubbling particles and extinguish sounds!
+* **In-game Config:** Now features full ModMenu and ClothConfig integration! Customize which fluids affect you, and toggle sounds or messages directly from the game.
 * **Lightweight and optimized:** It uses the official Fabric API events (`EntityElytraEvents.ALLOW`), so it doesn't cause lag or severe conflicts.
-* **Client-side compatible:** Designed to run cleanly on your client.
-* **Multilingual:** Currently supports English (`en_us`) and Spanish (`es_es`) out of the box.
+* **Client and Server Compatible:** Works flawlessly on multiplayer.
 
 ## 📦 Requirements
 
@@ -20,6 +24,8 @@ To play with this mod, you need to install the following:
 * Minecraft `1.21.11` 
 * Fabric Loader (`>=0.18.4`)
 * Fabric API
+* Cloth Config API (Recommended for configuration)
+* ModMenu (Recommended to access the config menu)
 * Java 21
 
 ## 🚀 Installation

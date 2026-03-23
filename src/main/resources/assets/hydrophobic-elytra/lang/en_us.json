@@ -1,3 +1,15 @@
 {
-  "message.hydrophobicelytra.too_wet": "Your Elytra is too wet to fly!"
+  "message.hydrophobicelytra.too_wet": "Your Elytra is too wet to fly!",
+  
+  "text.autoconfig.hydrophobic-elytra.title": "Hydrophobic Elytra Configuration",
+  "text.autoconfig.hydrophobic-elytra.category.general": "General",
+  "text.autoconfig.hydrophobic-elytra.category.feedback": "Feedback",
+  "text.autoconfig.hydrophobic-elytra.option.disableElytraOnSubmerge": "Disable Elytra Flight in Fluids",
+  "text.autoconfig.hydrophobic-elytra.option.disableElytraOnSubmerge.@Tooltip": "If disabled, the mod essentially turns off and you can fly underwater.",
+  "text.autoconfig.hydrophobic-elytra.option.affectedFluids": "Affected Fluids",
+  "text.autoconfig.hydrophobic-elytra.option.affectedFluids.@Tooltip": "Select which fluids will cancel Elytra flight.",
+  "text.autoconfig.hydrophobic-elytra.option.showWarningMessage": "Show Warning Message",
+  "text.autoconfig.hydrophobic-elytra.option.showWarningMessage.@Tooltip": "Shows a chat message when trying to fly in fluids.",
+  "text.autoconfig.hydrophobic-elytra.option.enableSound": "Enable Extinguish Sound",
+  "text.autoconfig.hydrophobic-elytra.option.enableSound.@Tooltip": "Plays a fire extinguish sound when trying to fly in fluids."
 }

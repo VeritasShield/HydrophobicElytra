@@ -17,6 +17,9 @@
 	"entrypoints": {
 		"main": [
 			"me.paravel.hydrophobicelytra.HydrophobicElytra"
+		],
+		"modmenu": [
+			"me.paravel.hydrophobicelytra.config.ModMenuIntegration"
 		]
 	},
 	"depends": {

@@ -1,3 +1,15 @@
 {
-  "message.hydrophobicelytra.too_wet": "¡Tus Elytras están demasiado mojadas para volar!"
+  "message.hydrophobicelytra.too_wet": "¡Tus Elytras están demasiado mojadas para volar!",
+
+  "text.autoconfig.hydrophobic-elytra.title": "Configuración de Hydrophobic Elytra",
+  "text.autoconfig.hydrophobic-elytra.category.general": "General",
+  "text.autoconfig.hydrophobic-elytra.category.feedback": "Experiencia",
+  "text.autoconfig.hydrophobic-elytra.option.disableElytraOnSubmerge": "Desactivar Elytras en fluidos",
+  "text.autoconfig.hydrophobic-elytra.option.disableElytraOnSubmerge.@Tooltip": "Si se desactiva, el mod dejará de funcionar y podrás volar bajo el agua.",
+  "text.autoconfig.hydrophobic-elytra.option.affectedFluids": "Fluidos Afectados",
+  "text.autoconfig.hydrophobic-elytra.option.affectedFluids.@Tooltip": "Selecciona qué fluidos cancelarán el vuelo con Elytras.",
+  "text.autoconfig.hydrophobic-elytra.option.showWarningMessage": "Mostrar Mensaje de Advertencia",
+  "text.autoconfig.hydrophobic-elytra.option.showWarningMessage.@Tooltip": "Muestra un mensaje rojo en el chat al intentar volar en fluidos.",
+  "text.autoconfig.hydrophobic-elytra.option.enableSound": "Activar Sonido al Mojarse",
+  "text.autoconfig.hydrophobic-elytra.option.enableSound.@Tooltip": "Reproduce un sonido de fuego apagándose al intentar volar en fluidos."
 }
