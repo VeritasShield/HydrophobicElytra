@@ -18,6 +18,9 @@
 		"main": [
 			"me.paravel.hydrophobicelytra.HydrophobicElytra"
 		],
+		"client": [
+			"me.paravel.hydrophobicelytra.HydrophobicElytraClient"
+		],
 		"modmenu": [
 			"me.paravel.hydrophobicelytra.config.ModMenuIntegration"
 		]

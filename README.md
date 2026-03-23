@@ -8,8 +8,6 @@
 
 **Hydrophobic Elytra** is a simple mod for Minecraft (Fabric) that adds a touch of realism and difficulty to the game: **it prevents players from flying or propelling themselves with Elytras while submerged in fluids** (such as water or lava).
 
-<!-- ✨ SUSTITUYE ESTA LÍNEA POR LA URL DE TU GIF (EJ. ![Demostración de Elytras fallando en el agua](https://url-del-gif-aqui.gif) ) ✨ -->
-
 ## ✨ Features
 
 * **Restricted flight in fluids:** If you try to open your Elytras underwater, lava, or any other fluid, the mod will cancel the action.

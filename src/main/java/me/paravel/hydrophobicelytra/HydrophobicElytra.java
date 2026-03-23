@@ -12,13 +12,7 @@ import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import me.paravel.hydrophobicelytra.config.HydrophobicElytraConfig;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
-
-
 public class HydrophobicElytra implements ModInitializer {
-	private static final Map<UUID, Long> COOLDOWNS = new HashMap<>();
 	@Override
 	public void onInitialize() {
 		AutoConfig.register(HydrophobicElytraConfig.class, GsonConfigSerializer::new);
@@ -44,36 +38,11 @@ public class HydrophobicElytra implements ModInitializer {
 				}
 
 				if (shouldCancel) {
-					if (!playerEntity.getEntityWorld().isClient() && playerEntity.getEntityWorld() instanceof net.minecraft.server.world.ServerWorld serverWorld) {
-						long currentTime = playerEntity.getEntityWorld().getTime();
-						UUID playerId = playerEntity.getUuid();
-						
-						// Cooldown de 60 ticks (3 segundos) para no spamear sonidos, texto y partículas
-						if (!COOLDOWNS.containsKey(playerId) || currentTime - COOLDOWNS.get(playerId) > 60) {
-							COOLDOWNS.put(playerId, currentTime);
-							
-							if (config.showWarningMessage) {
-								playerEntity.sendMessage(Text.translatable("message.hydrophobicelytra.too_wet").formatted(Formatting.RED), true);
-							}
-							
-							if (config.enableSound) {
-								// Feedback Sensorial: Sonido de fuego apagándose
-								playerEntity.playSound(
-									SoundEvents.BLOCK_FIRE_EXTINGUISH,
-									0.5F, 0.8F + (playerEntity.getRandom().nextFloat() - playerEntity.getRandom().nextFloat()) * 0.2F
-								);
-							}
-							
-							// Feedback Sensorial: Partículas de burbujas rompiéndose
-							serverWorld.spawnParticles(
-								ParticleTypes.BUBBLE_POP, 
-								playerEntity.getParticleX(0.5D), 
-								playerEntity.getRandomBodyY(), 
-								playerEntity.getParticleZ(0.5D), 
-								5, 0.0D, 0.05D, 0.0D, 0.0D
-							);
-						}
+					// En el cliente dejamos que HydrophobicElytraClient maneje la cancelación y el feedback visual/sonoro
+					if (playerEntity.getEntityWorld().isClient()) {
+						return true;
 					}
+					// En el servidor, cancelamos el vuelo.
 					return false; 
 				}
 			}
